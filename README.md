@@ -9,3 +9,6 @@ ny paragraf
  Bilde av datamodellen (bilde lenke)
 
  ![Bildetekst]()
+
+ ```js
+ let a = 34;
