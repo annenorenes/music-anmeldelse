@@ -20,6 +20,7 @@ Jeg trenge å opprette noen krav, slik at jeg kan danne en best mulig datamodell
 
 
 - En profil kan skrive flere anmeldelser
+- En anmeldelse tilhører kun en bruker
 - Et album og en singel kan bli anmeld av flere brukere
 
 
@@ -43,18 +44,6 @@ Kommentar
 - I en anmeldese kan en bruker anmelde enten et album eller en singel. I en anmeldelse kan man kun anmlede en av delene 
 - Et album og en singel bestpr av tittel, utgivingsdato, sjanger
 
+## Første utkast av datamodellen
 
-
-
-
-
-## test 
-
- [Trykk på meg!](https://ww.bt.no)
-
- Bilde av datamodellen (bilde lenke)
-
- ![Bildetekst]()
-
- ```js
- let a = 34;
+ ![Bildetekst](./bilder/drawio_ukast1.png)
