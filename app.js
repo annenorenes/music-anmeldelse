@@ -15,7 +15,7 @@ app.use(cors());
 // ...
 app.get('/api/alle_artister', (req, res) => {
     // ...
-    const artister = db.prepare('SELECT artist_navn FROM artist').all();
+    const artister = db.prepare('SELECT * FROM utgivelse;').all();
     res.json(artister);
 });
 
