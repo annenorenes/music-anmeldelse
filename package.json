@@ -1,0 +1,26 @@
+{
+  "name": "music-anmeldelse",
+  "version": "1.0.0",
+  "description": "Min ide! Jeg tenker å lage en tjeneste hvor man kan anmelde album og singler offentlig",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annenorenes/music-anmeldelse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/annenorenes/music-anmeldelse/issues"
+  },
+  "homepage": "https://github.com/annenorenes/music-anmeldelse#readme",
+  "dependencies": {
+    "better-sqlite3": "^12.8.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
