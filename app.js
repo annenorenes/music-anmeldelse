@@ -4,6 +4,9 @@ const app = express();
 
 const PORT = 3000;
 
+// Middleware for å servere statiske filer fra "public" mappen
+app.use(express.static('public'));
+
 // Databasen
 const Database = require('better-sqlite3');
 const db = new Database('musikk.db');
