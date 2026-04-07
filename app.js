@@ -19,6 +19,12 @@ app.get('/api/alle_artister', (req, res) => {
     res.json(artister);
 });
 
+app.get('/api/alle_artister', (req, res) => {
+    // ...
+    const artister = db.prepare('SELECT * FROM utgivelse;').all();
+    res.json(artister);
+});
+
 // Åpner en viss port på serveren, og starter serveren
 app.listen(PORT, () => {
     console.log(`Server kjører på http://localhost:${PORT}`);
