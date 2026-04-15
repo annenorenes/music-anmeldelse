@@ -6,8 +6,11 @@ async function henter_alle_artister() {
         const data = await response.json();
         console.log(data);
 
-        const container = document.getElementById("artist_liste");
-        container.innerHTML = "";
+        const utskrift = document.getElementById("artist_liste");
+        utskfit.innerHTML = "";
+
+        //jeg oppretter en div beholder for hver artist
+        
 
     }
     
