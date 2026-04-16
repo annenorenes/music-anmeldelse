@@ -14,6 +14,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public')); 
 
+
+
 // Denne linjen må stå ETTER "const app = express();"
 app.use('/bilder', express.static(path.join(__dirname, 'bilder')));
 
@@ -22,7 +24,7 @@ app.get('/api/alle_artister', (req, res) => {
     try {
         const artister = db.prepare('SELECT * FROM artist;').all();
         res.json(artister);
-    } catch (err) {
+    } catch (error) {
         res.status(500).json({ error: "Feil ved henting av artister" });
     }
 });
