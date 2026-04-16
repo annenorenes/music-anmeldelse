@@ -12,12 +12,18 @@ async function henterData() {
             let albumDiv = document.createElement("div"); //oppretter et div element for hver som printes ut
             albumDiv.className = "album";
 
-            let albumNavn = document.createElement("h3");
-            albumNavn.innerText = data[i].titel;
+            let albumTitle = document.createElement("h3");
+            albumTitle.innerText = data[i].titel;
 
+            let albumBilde = document.createElement("img");
+            albumBilde.src = "/bilder/" + data[i].utgivelses_bilde;
+            albumBilde.alt = "/bildet er av" + data[i].albumTitle;
+            albumBilde.style.width = "150px";
 
-        
+            albumDiv.appendChild(albumTitle);
+            albumDiv.appendChild(albumBilde);
 
+            utskrift.appendChild(albumDiv);
         }
     }
 
