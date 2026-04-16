@@ -19,7 +19,7 @@ async function henter_alle_artister() {
              let navn = document.createElement("h3");
              navn.innerText = data[i].artist_navn;
 
-             let bilde = document.createElement("img");
+            let bilde = document.createElement("img");
              bilde.src = "/bilder/" + data[i].bilde;
              bilde.alt = "Bilde er av" + data[i].artist_navn;
              bilde.style.width = "150px";
