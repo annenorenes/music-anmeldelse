@@ -47,3 +47,5 @@ Kommentar
 ## Første utkast av datamodellen
 
  ![Bildetekst](./bilder/drawio_ukast1.png)
+
+ # Underveis dokumentasjon
