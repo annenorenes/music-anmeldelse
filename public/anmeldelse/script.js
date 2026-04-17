@@ -1,5 +1,3 @@
-const skjema = document.getElementById()
-
 async function sendAnmeldelse(event) {
     event.preventDefault(); // Stopper siden fra å laste på nytt
 
@@ -44,6 +42,7 @@ async function sendAnmeldelse(event) {
             body: JSON.stringify(nyAnmeldelse) // Gjør objektet om til tekst
         });
 
+
         if (respons.ok) {
             const resultat = await respons.json();
             alert(resultat.message);
@@ -56,5 +55,7 @@ async function sendAnmeldelse(event) {
     }
 }
 
+
+
 // Koble funksjonen til skjemaet
-document.getElementById("anmeldelse_skjema").addEventListener("submit", sendAnmeldelse);
+document.getElementById("skjema").addEventListener("submit", sendAnmeldelse);

@@ -42,35 +42,59 @@ router.get('/alle_artister', (req, res) => {
 //     }
 // });
 
+// router.post('/skriv_anmeldelse', (req, res) => {
+//     try {
+//         // 1. Vi henter ut dataene som brukeren sendte fra skjemaet
+//         const { dato, kommentar, rating, bruker_id, utgivelses_id } = req.body;
+
+//         // 2. Vi forbereder en INSERT-spørring i stedet for SELECT
+//         const leggTil = db.prepare(`
+//             INSERT INTO anmeldelse (dato, kommentar, rating, bruker_id, utgivelses_id)
+//             VALUES (?, ?, ?, ?, ?)
+//         `);
+
+//         // 3. Vi kjører spørringen med dataene fra brukeren
+//         leggTil.run(dato, kommentar, rating, bruker_id, utgivelses_id);
+
+//         // 4. Vi sender et svar tilbake om at det gikk bra
+//         res.json({ message: "Anmeldelsen ble lagret i databasen!" });
+//     } 
+//     catch (error) {
+//     // Dette skriver den EKTE feilmeldingen i den sorte terminalen din!
+//     console.log("--- SQL FEIL START ---");
+//     console.error(error.message); 
+//     console.log("--- SQL FEIL SLUTT ---");
+
+//     res.status(500).json({
+//         error: "Feil ved innsending: " + error.message
+//     });
+//     }
+//     }
+// );
+
 router.post('/skriv_anmeldelse', (req, res) => {
     try {
-        // 1. Vi henter ut dataene som brukeren sendte fra skjemaet
+        console.log("BODY:", req.body);
+
         const { dato, kommentar, rating, bruker_id, utgivelses_id } = req.body;
 
-        // 2. Vi forbereder en INSERT-spørring i stedet for SELECT
+        console.log("DATA:", dato, kommentar, rating, bruker_id, utgivelses_id);
+
         const leggTil = db.prepare(`
             INSERT INTO anmeldelse (dato, kommentar, rating, bruker_id, utgivelses_id)
             VALUES (?, ?, ?, ?, ?)
         `);
 
-        // 3. Vi kjører spørringen med dataene fra brukeren
         leggTil.run(dato, kommentar, rating, bruker_id, utgivelses_id);
 
-        // 4. Vi sender et svar tilbake om at det gikk bra
         res.json({ message: "Anmeldelsen ble lagret i databasen!" });
-    } 
-    catch (error) {
-    // Dette skriver den EKTE feilmeldingen i den sorte terminalen din!
-    console.log("--- SQL FEIL START ---");
-    console.error(error.message); 
-    console.log("--- SQL FEIL SLUTT ---");
+    } catch (error) {
+        console.error("SQL FEIL:", error.message);
 
-    res.status(500).json({
-        error: "Feil ved innsending: " + error.message
-    });
+        res.status(500).json({
+            error: error.message
+        });
     }
-    }
-);
-
+});
 
 module.exports = router;

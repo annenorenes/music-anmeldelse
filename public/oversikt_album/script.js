@@ -34,3 +34,5 @@ async function henterData() {
 }
 
 henterData();
+
+console.log(nyAnmeldelse);
