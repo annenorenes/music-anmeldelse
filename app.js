@@ -4,8 +4,7 @@ const path = require('path');
 const cors = require('cors');
 const Database = require('better-sqlite3');
 
-const artistRuter = require('./rutere/ruter_artister');
-const albumRuter = require('./rutere/ruter_album');
+const ruter = require('./rutere/ruter.js');
 
 const app = express();
 // const db = new Database('musikk.db');
@@ -18,8 +17,10 @@ app.use(express.static('public'));
 app.use('/bilder', express.static(path.join(__dirname, 'bilder')));
 
 //finn ut hva app use betyr
-app.use('/api', artistRuter);
-app.use('/api', albumRuter);
+// app.use('/api', artistRuter);
+// app.use('/api', albumRuter);
+
+app.use('/api', ruter)
 
 
 // 5. START SERVER

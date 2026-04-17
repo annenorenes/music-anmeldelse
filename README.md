@@ -49,3 +49,10 @@ Kommentar
  ![Bildetekst](./bilder/drawio_ukast1.png)
 
  # Underveis dokumentasjon
+ ## Teknologi som er brukt
+
+ ## Datamodell
+
+ ## API endepunk
+
+ ## Beskrivelse av frontende
