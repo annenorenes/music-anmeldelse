@@ -1,10 +1,25 @@
+const skjema = document.getElementById()
+
 async function sendAnmeldelse(event) {
     event.preventDefault(); // Stopper siden fra å laste på nytt
 
-    // 1. Henter ut verdiene fra input-feltene i HTML
-    const dato = document.getElementById("dato_felt").value;
-    const kommentar = document.getElementById("kommentar_felt").value;
-    const rating = document.getElementById("rating_felt").value;
+    // // 1. Henter ut verdiene fra input-feltene i HTML
+    // const dato = document.getElementById("dato_felt").value;
+    // const kommentar = document.getElementById("kommentar_felt").value;
+    // const rating = document.getElementById("rating_felt").value;
+    const datoEl = document.getElementById("dato");
+    const kommentarEl = document.getElementById("kommentar");
+    const ratingEl = document.getElementById("rating");
+
+    // Sjekk om de faktisk finnes før vi leser .value
+    if (!datoEl || !kommentarEl || !ratingEl) {
+        console.error("Fant ikke alle input-feltene i HTML-en!");
+        return;
+    }
+
+    const dato = datoEl.value;
+    const kommentar = kommentarEl.value;
+    const rating = ratingEl.value;
     
     // Vi må vite hvilket album dette gjelder (f.eks. fra URL-en)
     const urlParams = new URLSearchParams(window.location.search);
