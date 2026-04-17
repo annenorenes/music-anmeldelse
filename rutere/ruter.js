@@ -60,12 +60,17 @@ router.post('/skriv_anmeldelse', (req, res) => {
         res.json({ message: "Anmeldelsen ble lagret i databasen!" });
     } 
     catch (error) {
-        console.error(error);
-        res.status(500).json({
-            error: "Feil ved innsending av data til databasen"
-        });
+    // Dette skriver den EKTE feilmeldingen i den sorte terminalen din!
+    console.log("--- SQL FEIL START ---");
+    console.error(error.message); 
+    console.log("--- SQL FEIL SLUTT ---");
+
+    res.status(500).json({
+        error: "Feil ved innsending: " + error.message
+    });
     }
-});
+    }
+);
 
 
 module.exports = router;
