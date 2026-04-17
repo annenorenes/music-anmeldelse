@@ -46,7 +46,7 @@ Kommentar
 
 ## Første utkast av datamodellen
 
- ![Bildetekst](./bilder/drawio_ukast1.png)
+ ![Bildetekst](./bilder/datamodel_1.drawio.png)
 
  # Underveis dokumentasjon
  ## Teknologi som er brukt
