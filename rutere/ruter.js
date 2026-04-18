@@ -78,16 +78,16 @@ router.post('/skriv_anmeldelse', (req, res) => {
     try {
         console.log("BODY:", req.body);
 
-        const { dato, kommentar, rating, bruker_id, utgivelses_id } = req.body;
+        const { dato, kommentar, rating, utgivelses_id } = req.body;
 
-        console.log("DATA:", dato, kommentar, rating, bruker_id, utgivelses_id);
+        console.log("DATA:", dato, kommentar, rating, utgivelses_id);
 
         const leggTil = db.prepare(`
-            INSERT INTO anmeldelse (dato, kommentar, rating, bruker_id, utgivelses_id)
+            INSERT INTO anmeldelse (dato, kommentar, rating, utgivelses_id)
             VALUES (?, ?, ?, ?, ?)
         `);
 
-        leggTil.run(dato, kommentar, rating, bruker_id, utgivelses_id);
+        leggTil.run(dato, kommentar, rating, utgivelses_id);
 
         res.json({ message: "Anmeldelsen ble lagret i databasen!" });
     } catch (error) {

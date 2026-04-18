@@ -20,8 +20,14 @@ async function henterData() {
             albumBilde.alt = "/bildet er av" + data[i].albumTitle;
             albumBilde.style.width = "150px";
 
+            let anmeldelseKnapp = document.createElement("a");
+            anmeldelseKnapp.href = "../anmeldelse/index.html?utgivelses_id=" + data[i].utgivelses_id;
+            anmeldelseKnapp.innerText = "⭐ Skriv anmeldelse";
+
+        
             albumDiv.appendChild(albumTitle);
             albumDiv.appendChild(albumBilde);
+            albumDiv.appendChild(anmeldelseKnapp);
 
             utskrift.appendChild(albumDiv);
         }
@@ -35,4 +41,3 @@ async function henterData() {
 
 henterData();
 
-console.log(nyAnmeldelse);
