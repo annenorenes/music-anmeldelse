@@ -46,6 +46,7 @@ Kommentar
 
 ## Første utkast av datamodellen
 
+![Bildetekst](./bilder/database4.drawio.png);
 
  # Underveis dokumentasjon
  ## Teknologi som er brukt
