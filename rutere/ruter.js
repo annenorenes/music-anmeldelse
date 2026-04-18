@@ -29,6 +29,8 @@ router.get('/alle_artister', (req, res) => {
     }
 });
 
+
+
 // router.post('/skriv_anmeldelse', (req, res) => {
 //     try {
 //         const anmeldelse = db.prepare('SELECT * FROM anmeldelse;').all()
@@ -95,6 +97,10 @@ router.post('/skriv_anmeldelse', (req, res) => {
             error: error.message
         });
     }
+});
+
+router.get('/skriv_anmeldelse', (req, res) => {
+    res.send("Ruta finst! Bruk POST for å sende data.");
 });
 
 module.exports = router;
