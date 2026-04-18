@@ -29,6 +29,7 @@ async function henterData() {
             albumDiv.appendChild(albumBilde);
             albumDiv.appendChild(anmeldelseKnapp);
 
+
             utskrift.appendChild(albumDiv);
         }
     }
