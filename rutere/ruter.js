@@ -76,31 +76,20 @@ router.get('/alle_artister', (req, res) => {
 
 router.post('/skriv_anmeldelse', (req, res) => {
     try {
-        console.log("BODY:", req.body);
-
         const { dato, kommentar, rating, utgivelses_id } = req.body;
-
-        console.log("DATA:", dato, kommentar, rating, utgivelses_id);
 
         const leggTil = db.prepare(`
             INSERT INTO anmeldelse (dato, kommentar, rating, utgivelses_id)
-            VALUES (?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?)
         `);
 
         leggTil.run(dato, kommentar, rating, utgivelses_id);
 
-        res.json({ message: "Anmeldelsen ble lagret i databasen!" });
+        res.json({ message: "Anmeldelsen ble lagret!" });
     } catch (error) {
         console.error("SQL FEIL:", error.message);
-
-        res.status(500).json({
-            error: error.message
-        });
+        res.status(500).json({ error: error.message });
     }
-});
-
-router.get('/skriv_anmeldelse', (req, res) => {
-    res.send("Ruta finst! Bruk POST for å sende data.");
 });
 
 module.exports = router;
