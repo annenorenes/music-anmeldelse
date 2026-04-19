@@ -131,9 +131,11 @@ For å presentere album og artister har jeg brukt display: grid med repeat(auto-
  
  En annen løsing kynne vært å hardkode inn en slagst test bruker, for å så kunne beholde bruker kolonnen uten et ferdig innlogginsssytem. Dette kunne vært bra for å koble anmeldelser til en bruker, samt negativt, ettersom hver anmeldelse ville vært lagret på samme bruker
  
- 
- 
+ ## API endepukt
+ I min kode har jeg opprettet 3 Api-endepunkt. Api-endepunktene er backenden og er den som frontendenden kommuniserer med for å nå databasen. 
 
- ## API endepunk
+**/api/alle_album** fungerer slik ved at 
+
+
 
  ## Beskrivelse av frontende

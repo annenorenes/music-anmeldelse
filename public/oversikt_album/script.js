@@ -1,6 +1,6 @@
-async function henterData() {
+async function henteData() {
     try {
-        const res = await fetch('/api/alle_album');
+        const res = await fetch('/api/hente_alle_album');
         const data = await res.json();
         console.log(data);
 

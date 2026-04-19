@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require('../database');
 
 
-router.get('/alle_album', (req, res) => {
+router.get('/hente_alle_album', (req, res) => {
     try {
         const album = db.prepare('SELECT * FROM utgivelse;').all();
         res.json(album);
@@ -16,7 +16,7 @@ router.get('/alle_album', (req, res) => {
     }
 })
 
-router.get('/alle_artister', (req, res) => {
+router.get('/hente_alle_artister', (req, res) => {
     try {
         const artister = db.prepare('SELECT * FROM artist;').all();
         res.json(artister);
@@ -28,8 +28,6 @@ router.get('/alle_artister', (req, res) => {
         });
     }
 });
-
-
 
 
 router.post('/skriv_anmeldelse', (req, res) => {
