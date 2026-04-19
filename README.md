@@ -76,7 +76,10 @@ I dette prosjektet har jeg måtte brukt, samt lært masse om hva og hvordan tekn
  
 ## Frontend
 #### Universell utforming UU
- Når det kommer til utforming har jeg brukt HTML5, CSS3 og JavaScript, hvor HTML5 er den nåværende staderd versjonen av HTML, som intodusere flere semantiske elemementer som <header>, <footer> og <article>. I min kode har jeg valgt å ta i bruk semantiske emelenter som beskriver inneholdet. Jeg har valgt å bruke beskrivede semantiske tagger for å gjøre koden mer tilgjengelig for alle. For eksempel vil bilde eller andre med sysnavsker være avhengig av for eksmpel skjermlesning. For at alle skal ha muligheten til å navigere seg rundt på nettsiden er det viktig å velge meningsfulle semantiske elementer, som <header>, <nav> og <main>. 
+ Når det kommer til utforming har jeg brukt **HTML5**, CSS3 og JavaScript, hvor HTML5 er den nåværende staderd versjonen av HTML, som intodusere flere semantiske elemementer som <header>, <footer> og <article>. I min kode har jeg valgt å ta i bruk semantiske emelenter som beskriver inneholdet. Jeg har valgt å bruke beskrivede semantiske tagger for å gjøre koden mer tilgjengelig for alle. For eksempel vil bilde eller andre med sysnavsker være avhengig av for eksmpel skjermlesning. For at alle skal ha muligheten til å navigere seg rundt på nettsiden er det viktig å velge meningsfulle semantiske elementer, som <header>, <nav> og <main>. 
+
+Jeg har brukt **CSS3** for å style applikasjonen med fokus på et intuitivt grensesnitt og universell utforming. Jeg har valgt farger med høy kontrast, f.eks. mørk tekst på lys bakgrunn, for å sikre at innholdet er lesbart for alle. Dette er i tråd med WCAG-kravene om et kontrastforhold på minst 4.5:1. TFor brukere som navigerer med tastatur, har jeg lagt til en tydelig outline på knapper og input-felt når de er i fokus. Dette er et kritisk UU-tiltak som gjør at man alltid ser hvor man befinner seg på siden. Ved å bruke relative enheter.som rem og %, og flexbox, har jeg sørget for at grensesnittet tilpasser seg ulike skjermstørrelser. Dette gjør at tjenesten fungerer like bra på mobil som på PC.
+
  #### SEO
  Ved bruk av gode semantiske elemnter kan søkeroboter, som google bruker, forstå inneholde bedre, noe som kan gjøre mer synlighet i søkeresultater
  #### Sammerbeid blir lettere
