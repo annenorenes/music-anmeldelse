@@ -1,0 +1,27 @@
+:root {
+   
+    --primary-bg: #ffffff;
+    --text-color: #222222; /* Mørk grå er ofte bedre enn kullsvart for lesbarhet */
+    --accent-color: #0056b3; /* Blåfarge med god kontrast mot hvit */
+    --error-color: #d93025;
+    --focus-outline: #ffbf47; /* Tydeleg gulfarge for tastaturfokus */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Bruker "sans-serif" som er lettere å lese på skjerm */
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--primary-bg);
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #f8f9fa;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
