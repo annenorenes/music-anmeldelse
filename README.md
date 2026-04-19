@@ -55,17 +55,17 @@ I dette prosjektet har jeg måtte brukt, samt lært masse om hva og hvordan tekn
 ### Node.js
  Node.js er «Runtime system» -et til JavaScript. Før Node.js, når man skulle opprette en tjeneste som besto av en frontende og en backende, altså en nettside som kommuniserte med serveren, kunne ikke JavaScript gjøre dette aleine. Det krevdes andre programmeringsspråk. Med node.js kunne du lage webapplikasjoner som har en backend som kommuniserer med frontende. 
  
-#### Nmp
- Dette kan man sammenligne med en verktøyskasse. Nmp består av mange tusen «open source librabies» , og på den måten gjør det å kode enklere, ettersom det gir oss muligheten til å hente ekstrerne bibloteker og pakker.
+#### Npm
+ Dette kan man sammenligne med en verktøyskasse. Npm består av mange tusen «open source librabies» , og på den måten gjør det å kode enklere, ettersom det gir oss muligheten til å hente ekstrerne bibloteker og pakker.
  
 #### Avhengigheter
- Vi laster ned, gjennom nmp, videre avhengigheter for å kunne opprette våres web-applikasjon. Vi laster ned ‘Express’, ‘Better-sqlite3’ og ‘corse’
+ Vi laster ned, gjennom npm, videre avhengigheter for å kunne opprette våres web-applikasjon. Vi laster ned ‘Express’, ‘Better-sqlite3’ og 'CORS’
  
 #### Express
  Express gir oss muligheten til å ta i bruk et robust ‘Routing system’. Vi kan bruke express til å definere hvordan web-applikasjonen reagerer, som i min kode har jeg brukt GET  og POST. De to gjør ulike ting, hvor GET henter data fra databasen og viser det på nettsiden, mens POST sender inn data i databsen
 
- #### Corse
- Corse er en avhengighet vi lastet ned, og fungerer som en sikkerhets mekanisme. Corse gir forntenden muligheten til å kommuiserene med backenden, også vica versa. 
+ #### CORS
+ CORS er en avhengighet vi lastet ned, og fungerer som en sikkerhets mekanisme. CORS gir forntenden muligheten til å kommuiserene med backenden, også vica versa. 
  
 ## Lagring 
 
@@ -75,9 +75,13 @@ I dette prosjektet har jeg måtte brukt, samt lært masse om hva og hvordan tekn
  Jeg lagrer databasen jeg opprettete i SQLiteStudio i samme repositorien min, og ved hjelp av Better-Sqlite3 har jeg muligheten til å sende inn data og hente ut data
  
 ## Frontend
- 
- 
- 
+#### Universell utforming UU
+ Når det kommer til utforming har jeg brukt HTML5, CSS3 og JavaScript, hvor HTML5 er den nåværende staderd versjonen av HTML, som intodusere flere semantiske elemementer som <header>, <footer> og <article>. I min kode har jeg valgt å ta i bruk semantiske emelenter som beskriver inneholdet. Jeg har valgt å bruke beskrivede semantiske tagger for å gjøre koden mer tilgjengelig for alle. For eksempel vil bilde eller andre med sysnavsker være avhengig av for eksmpel skjermlesning. For at alle skal ha muligheten til å navigere seg rundt på nettsiden er det viktig å velge meningsfulle semantiske elementer, som <header>, <nav> og <main>. 
+ #### SEO
+ Ved bruk av gode semantiske elemnter kan søkeroboter, som google bruker, forstå inneholde bedre, noe som kan gjøre mer synlighet i søkeresultater
+ #### Sammerbeid blir lettere
+ Når andre utviklere skal ta over koden, vil koden være mer fortåelig for andre hvis vi bruker beskirvende semantiske taggere i stedet for mange <div> elementer. Dette kan også gjøre koden vansklige å tolke
+
 
  # Datamodell
  
