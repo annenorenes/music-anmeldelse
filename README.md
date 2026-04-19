@@ -85,9 +85,6 @@ Jeg har brukt **CSS3** for å style applikasjonen med fokus på et intuitivt gre
  #### Sammerbeid blir lettere
  Når andre utviklere skal ta over koden, vil koden være mer fortåelig for andre hvis vi bruker beskirvende semantiske taggere i stedet for mange div elementer. Dette kan også gjøre koden vansklige å tolke
 
- ### Vanilla JavaScript
- Jeg har brukt Vanilla JavaScript i frontenden, ettersom  det gir full kontroll over DOM-manipulasjon og kommunikasjon med API-et uten ekstra tyngde fra eksterne rammeverk. Det vil si at jeg 'snakker' med html-en gjennom 'document.creatChild' i JavaScript. Dette er i tråd med oppgavekravene om å bruke standard webteknologi.
-
  # Datamodell
  
  ## Datamodellen designet i draw.io

@@ -24,6 +24,8 @@ async function henterData() {
             anmeldelseKnapp.href = "../anmeldelse/index.html?utgivelses_id=" + data[i].utgivelses_id;
             anmeldelseKnapp.innerText = "⭐ Skriv anmeldelse";
 
+
+
         
             albumDiv.appendChild(albumTitle);
             albumDiv.appendChild(albumBilde);
