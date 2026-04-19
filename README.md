@@ -147,7 +147,7 @@ Det er her alle rutene jeg oprette ligger. I toppen av koden definerer jeg tre v
 - const router = express.Router(); ved å skrive denne linjen gir det oss muligheten til å opprette et ruter-objekt. 
 - const db = require('../database'); dette er stien til database.js, som er filen som kobler oss til databasen våres (musikk.db)
 
-**/api/hente_alle_album** fungerer slik ved at:
+**/api/hente_alle_album** er skrevet slik pga:
 
 Jeg oppretter en api og sier at den apien fungerer kun når vi skal hente noe. Det skyles at jeg bruker GET, et verktøy som kommer fra Express, som gir oss muligheten til å hente data.
 
@@ -157,6 +157,17 @@ res.json(album) forteller at arrayn skal sendes som sendes som en string.
 
 **skriv om feil mld her anne!**
 
+**/api/skriv_anmeldelse** er skrevet slik pga :
 
+Denne er anderledes, og man ser det tydlig etter ruteren er betydlig lengre. Denne ruteren krever data som den skal sendes inn i musikk.db 
+
+vi burker router.post og opprettet navn for Api-endepunktet. Vi sier videre at dato, kommentar, rating, utgivelses_id, en liste med variabler er definert som req.body. Hvorfor? 
+
+req.body er en slags pakke som inneholder informasjon fra frontenden. I skjemat som vi fyller ut i nettsiden, anmeldelsen, som snedes inn, skriver vi inn data. Dataen sendes på en måte over nettverke. fra frontenden til backenden, som kaller på ruteren. 
+
+vi oppretter variabelen 'leggTil' som gjør dataen som kom inn, klar for å sendes inn i tabellen 'anmeldelse'. Vi skrives values ???? som slags 'placeholders'
+Videre skriver vi leggTil.run, hvor run er en funksjon som vi bruker når vi gjør endringer i en database
 
  ## Beskrivelse av frontende
+
+backendene, altså ruterene, skal kommunisere med frontendene. Api-endepunktet 'kjøres' når vi bruker fetch('valgt_api-endepunkt'), og det er på denne måten frontenden kommuniserer med backenden
