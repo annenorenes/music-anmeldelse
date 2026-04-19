@@ -44,17 +44,23 @@ Kommentar
 - I en anmeldese kan en bruker anmelde enten et album eller en singel. I en anmeldelse kan man kun anmlede en av delene 
 - Et album og en singel bestpr av tittel, utgivingsdato, sjanger
 
-## Første utkast av datamodellen
-
-![Bildetekst](./bilder/database4.drawio.png);
 
  # Underveis dokumentasjon
  ## Teknologi som er brukt
 
+I dette prosjektet har jeg måtte brukt, samt lært masse om hva og hvordan teknologien gjør det mulig å skape denne tjenesten
+ 
+### Node.js
+ Node.js er «Runtime system» -et til JavaScript. Før Node.js, når man skulle opprette en tjeneste som besto av en frontende og en backende, altså en nettside som kommuniserte med serveren, kunne ikke JavaScript gjøre dette aleine. Det krevdes andre programmeringsspråk. Med node.js kunne du lage webapplikasjoner som har en backend som kommuniserer med frontende. 
+ 
+ 
+ 
+
  # Datamodell
  
  ## Datamodellen designet i draw.io
- 
+
+![Bildetekst](./bilder/database4.drawio.png);
  Jeg har delt systemet i fire tabeller. Dette er på en måte første utkast, og er ikke, nærheten til å være ferdig fylt ut, men det er et bra første utkast. Datamodellen har tre relasjoner, og derfor oppfyller minste kravet 
  
  - Bruker: Lagrer informasjon om dem som anmelder
