@@ -25,3 +25,71 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #767676; /* Tykkere border for tydelighet */
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Sikrer at padding ikke ødelegger bredden */
+}
+
+/* VIKTIG: Tastaturnavigasjon (WCAG 2.1.1) */
+input:focus, textarea:focus, button:focus {
+    outline: 4px solid var(--focus-outline);
+    outline-offset: 2px;
+}
+
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #003d7a;
+}
+
+/* 5. RESPONSIVITET (Sømløs på mobil) */
+@media (max-width: 600px) {
+    main {
+        margin: 1rem auto;
+    }
+    
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
