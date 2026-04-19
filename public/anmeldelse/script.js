@@ -7,13 +7,13 @@ async function sendAnmeldelse() {
     const rating = document.getElementById("rating").value;
 
     try {
-        const res = await fetch('/api/skriv_anmeldelse', {
+        const response = await fetch('/api/skriv_anmeldelse', {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ dato, kommentar, rating, utgivelses_id })
         });
 
-        const data = await res.json();
+        const data = await response.json();
         console.log(data);
 
         if (data.message) {
@@ -32,3 +32,15 @@ document.getElementById("skjema").addEventListener("submit", function (e) {
     e.preventDefault();
     sendAnmeldelse();
 });
+
+
+
+const skjema = document.getElementById("skjema")
+
+skjema.addEventListener("submit", async function (info) {
+
+    const paraps = new URLSearchParams(window.location.search);
+
+
+
+})

@@ -31,59 +31,18 @@ router.get('/alle_artister', (req, res) => {
 
 
 
-// router.post('/skriv_anmeldelse', (req, res) => {
-//     try {
-//         const anmeldelse = db.prepare('SELECT * FROM anmeldelse;').all()
-//         req.json(anmeldelse);
-//     }
-    
-//     catch (error) {
-//         res.status(500).json({
-//             error: "Feil ved innsending av data"
-//         })
-//     }
-// });
-
-// router.post('/skriv_anmeldelse', (req, res) => {
-//     try {
-//         // 1. Vi henter ut dataene som brukeren sendte fra skjemaet
-//         const { dato, kommentar, rating, bruker_id, utgivelses_id } = req.body;
-
-//         // 2. Vi forbereder en INSERT-spørring i stedet for SELECT
-//         const leggTil = db.prepare(`
-//             INSERT INTO anmeldelse (dato, kommentar, rating, bruker_id, utgivelses_id)
-//             VALUES (?, ?, ?, ?, ?)
-//         `);
-
-//         // 3. Vi kjører spørringen med dataene fra brukeren
-//         leggTil.run(dato, kommentar, rating, bruker_id, utgivelses_id);
-
-//         // 4. Vi sender et svar tilbake om at det gikk bra
-//         res.json({ message: "Anmeldelsen ble lagret i databasen!" });
-//     } 
-//     catch (error) {
-//     // Dette skriver den EKTE feilmeldingen i den sorte terminalen din!
-//     console.log("--- SQL FEIL START ---");
-//     console.error(error.message); 
-//     console.log("--- SQL FEIL SLUTT ---");
-
-//     res.status(500).json({
-//         error: "Feil ved innsending: " + error.message
-//     });
-//     }
-//     }
-// );
 
 router.post('/skriv_anmeldelse', (req, res) => {
     try {
-        const { dato, kommentar, rating, utgivelses_id } = req.body;
+        const { dato, kommentar, rating, utgivelses_id } = req.body; //body er en varibalen, som består av fire verdier (dato, kommentar, rating, utgivelses_id) med data, som skal sendes inn i databasen. Vi requester å sende daten til de fire verdiene inn
 
-        const leggTil = db.prepare(`
+        //gjør deg klar til å legge til data i databsen
+        const leggTil = db.prepare(` 
             INSERT INTO anmeldelse (dato, kommentar, rating, utgivelses_id)
             VALUES (?, ?, ?, ?)
         `);
-
-        leggTil.run(dato, kommentar, rating, utgivelses_id);
+        
+        leggTil.run(dato, kommentar, rating, utgivelses_id); //run() bruker når vi skal endre data i databaser
 
         res.json({ message: "Anmeldelsen ble lagret!" });
     } catch (error) {
@@ -93,3 +52,4 @@ router.post('/skriv_anmeldelse', (req, res) => {
 });
 
 module.exports = router;
+
