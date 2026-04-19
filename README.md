@@ -76,7 +76,7 @@ Kommentar
 ## Normalisering:
  Ved å skille dette ut i en egen tabell, følger jeg reglene for normalisering. Jeg slipper å lagre brukernavnet på nytt hver gang noen skriver en anmeldelse.
  
- Opprette databasen i SQLiteStudio 
+### Opprette databasen i SQLiteStudio 
  
  Videre skrev jeg inn alle tabeller og kolloner ut ifra datamodellen. Jeg lå samt inn test data. 
  
@@ -88,7 +88,8 @@ Kommentar
  
  Det som skjer er at dataen som skjemaet for inn blir ikke sendt inn, selv etter daten blir sendt korrekt ut. Jeg forstå at problemet må ligge hentingen av daten. Problemet lå i bruker_id. Anmeldelse tabellen forventer bruker_id for å koble anmeldelsen send til en bruker. Bruker_id er oblegatorisk, og ettersom innloggingsystemet mangles foreløbing, vil SQLite sende ut: Foreign Key constraint failed
  
- Hvordan velger jeg å løse dette: Jeg har valgt å fjerne bruker kolonnen fra databasen. Dette er noe jeg kan forhåpentligvis legge til i seinere tid når jeg har fått på plass innlogging, men nå lager det unødvendig trøbbel.
+### Hvordan velger jeg å løse dette: 
+ Jeg har valgt å fjerne bruker kolonnen fra databasen. Dette er noe jeg kan forhåpentligvis legge til i seinere tid når jeg har fått på plass innlogging, men nå lager det unødvendig trøbbel.
  
  Jeg for til å sende data inn i databasen, som vil si at jeg har fått til en kommunikasjon mellom frontende og bakenden! Jeg ser tydelig at data som sendes inn lagres, og jeg må refreshe for å få opp ny data lagt inn. Jeg sletter ved å trykke på knappen ves siden av commit. 
  
