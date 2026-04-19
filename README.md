@@ -134,7 +134,28 @@ For å presentere album og artister har jeg brukt display: grid med repeat(auto-
  ## API endepukt
  I min kode har jeg opprettet 3 Api-endepunkt. Api-endepunktene er backenden og er den som frontendenden kommuniserer med for å nå databasen. 
 
-**/api/alle_album** fungerer slik ved at 
+ Jeg opretter oppretter en mappe i roten av koden, med navnet rutere. Denne mappen inneholder en fil som heter ruter.js, hvor alle ruterene jeg har opprettet ligger der. Grunnen til at jeg lagt ruter.js i en egen mappe er for å holde orden på hvor jeg har filen med ruterene, og hvis jeg ønsker å utvide programmet mitt, og dermed er nøtt til å opprette veldig mange rutere, kan jeg opprette flere ruter filer i denne mappen
+
+ Grunnen til at jeg valgte å seperere ruterene fra app.js, som er filen hvor orginalt alle ruterene lå er for å holde denne filen så ryddig og oversiktlig så mulig.
+
+ app.js inneholder flere sentrale linjer som er nødvendig for at koden skal fungere. Jeg ønsker at hver fil, for å hold mest mulig orden, gjør en spesefik ting, hvor hvis app.js skulle bestått av ruteren også, ville app.js hatt mange ulike oppgaver, vært lang og uoversiktlig, noe som gjør det vanskligere å finne f.eks. feil. Jeg har samt opprettet en database.js som gir meg muligheten til å lett koble på nye databaser. Jeg kan på denne måten få koden min til å bli så modulært og organisert som mulig
+
+#### ruter.js
+Det er her alle rutene jeg oprette ligger. I toppen av koden definerer jeg tre variabler, som er viktige for at jeg skal kunne i det hele tatt oprette rutere. 
+
+- const express = require('express'); her sier jeg at variabelen 'express' krever avhengigheten express
+- const router = express.Router(); ved å skrive denne linjen gir det oss muligheten til å opprette et ruter-objekt. 
+- const db = require('../database'); dette er stien til database.js, som er filen som kobler oss til databasen våres (musikk.db)
+
+**/api/hente_alle_album** fungerer slik ved at:
+
+Jeg oppretter en api og sier at den apien fungerer kun når vi skal hente noe. Det skyles at jeg bruker GET, et verktøy som kommer fra Express, som gir oss muligheten til å hente data.
+
+variabelen album består av en spørringing til databsen, og vi sier db.prepare, vil si på en måte at vi gjør ruteren klar til å brukes/klar til å kommunisere med databasen. .all() gjør slik at alt blir sendt, og at det kommer i en array. Det kan vi se når vi går inn i consolen og dataen som er hentet skrives ut, vil den komme i en array. 
+
+res.json(album) forteller at arrayn skal sendes som sendes som en string. 
+
+**skriv om feil mld her anne!**
 
 
 

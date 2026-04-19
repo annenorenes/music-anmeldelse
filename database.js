@@ -3,3 +3,4 @@ const databasen =  require('better-sqlite3'); // i denne oppgaven ligger daten i
 const db = new databasen('musikk.db'); //oppretter en forbindelse til filen. 
 
 module.exports = db; //gjør forbindelsen tilgjengelig for alle
+

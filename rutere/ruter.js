@@ -7,6 +7,7 @@ router.get('/hente_alle_album', (req, res) => {
     try {
         const album = db.prepare('SELECT * FROM utgivelse;').all();
         res.json(album);
+        
     }
 
     catch (error) {
