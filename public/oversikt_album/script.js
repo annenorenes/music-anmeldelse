@@ -23,9 +23,6 @@ async function henteData() {
             let anmeldelseKnapp = document.createElement("a");
             anmeldelseKnapp.href = "../anmeldelse/index.html?utgivelses_id=" + data[i].utgivelses_id;
             anmeldelseKnapp.innerText = "⭐ Skriv anmeldelse";
-
-
-
         
             albumDiv.appendChild(albumTitle);
             albumDiv.appendChild(albumBilde);
@@ -42,5 +39,5 @@ async function henteData() {
     
 }
 
-henterData();
+henteData();
 

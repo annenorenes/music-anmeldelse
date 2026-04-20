@@ -151,9 +151,9 @@ Det er her alle rutene jeg oprette ligger. I toppen av koden definerer jeg tre v
 
 Jeg oppretter en api og sier at den apien fungerer kun når vi skal hente noe. Det skyles at jeg bruker GET, et verktøy som kommer fra Express, som gir oss muligheten til å hente data.
 
-variabelen album består av en spørringing til databsen, og vi sier db.prepare, vil si på en måte at vi gjør ruteren klar til å brukes/klar til å kommunisere med databasen. .all() gjør slik at alt blir sendt, og at det kommer i en array. Det kan vi se når vi går inn i consolen og dataen som er hentet skrives ut, vil den komme i en array. 
+variabelen album består av en spørringing til databsen, og vi sier db.prepare, vil si på en måte at vi gjør ruteren klar til å brukes/klar til å kommunisere med databasen. .all() gjør slik at alt blir sendt, og at det kommer i en array. 
 
-res.json(album) forteller at arrayn skal sendes som sendes som en string. 
+res.json(album) forteller at arrayn skal sendes som sendes som en string. Grunnen til det er at over internett så kan man kun sende som en string
 
 **skriv om feil mld her anne!**
 
@@ -163,11 +163,33 @@ Denne er anderledes, og man ser det tydlig etter ruteren er betydlig lengre. Den
 
 vi burker router.post og opprettet navn for Api-endepunktet. Vi sier videre at dato, kommentar, rating, utgivelses_id, en liste med variabler er definert som req.body. Hvorfor? 
 
-req.body er en slags pakke som inneholder informasjon fra frontenden. I skjemat som vi fyller ut i nettsiden, anmeldelsen, som snedes inn, skriver vi inn data. Dataen sendes på en måte over nettverke. fra frontenden til backenden, som kaller på ruteren. 
+req.body er en slags pakke som inneholder informasjon fra frontenden. I skjemat som vi fyller ut i nettsiden, anmeldelsen, som snedes inn, skriver vi inn data. Dataen sendes på en måte over nettverke, fra frontenden til backenden
 
-vi oppretter variabelen 'leggTil' som gjør dataen som kom inn, klar for å sendes inn i tabellen 'anmeldelse'. Vi skrives values ???? som slags 'placeholders'
+vi oppretter variabelen 'leggTil' som gjør dataen som kom inn, klar for å sendes inn i tabellen 'anmeldelse' i databsen. Vi skrives values ???? som slags 'placeholders'
 Videre skriver vi leggTil.run, hvor run er en funksjon som vi bruker når vi gjør endringer i en database
 
  ## Beskrivelse av frontende
 
-backendene, altså ruterene, skal kommunisere med frontendene. Api-endepunktet 'kjøres' når vi bruker fetch('valgt_api-endepunkt'), og det er på denne måten frontenden kommuniserer med backenden
+backendene, altså ruterene, skal kommunisere med frontendene. Api-endepunktet 'kjøres' når vi bruker fetch('valgt_api-endepunkt'), og det er på denne måten frontenden kommuniserer med backenden. 
+I koden har jeg tre ulike sider, som skal etter hvert ha en sammenheng. 
+
+### "hvilke sider, hva de gjør, og hvordan de kommuniserer med backend"
+
+
+#### Side 1 - Alle relevante album
+Denne siden skal vise frem alle relevante album, hvor det som egentlig skjer er at det hentes informasjon fra databasen og til nettsiden, altså klient siden.
+
+Frontenden her, fetch, kommuniserer med backenden, ved at fetch kaller på api-endepunktet. Fetch er asyncron, som vil si at koden er fremdeles oppe å går og fungerer helt til den for svar. Api-endepunktet består av en spørring, hvor i denne sammenhengen spør spørringen etter all infomrasjon fra 'utgivelser' tabellen i databsen. Når ruteren mottar dataen kommer den tilbake i en array, før den gjøres om til en json string, ettersom det kreves når vi sender noe over nettet, før når fetch mottar dataen så gjør den det om til en array igjen. Dette kalles serialisering.
+
+#### Side 2 - Alle relevante artister
+Denne siden er ikke fullført, hvor ønsket resultat ville vært at når du trykker på et album ville du hatt muligheten til å både anmelde et album, samt besøke artisten som produserte albumet sin profil. 
+
+Denne siden kommunserer helt likt med backenden som side 1, ettersom de begge to bruker GET, altså henter data, ved hjelp av å kalle på et api endepunkt.
+
+#### Side 3 - Skrive anmeldelse 
+Formålet med denne siden er at det skal gi brukeren muligheten til å skive en rating og kommentar til et album eller singel. Denne siden litt anderledes, og det er med komplisert. 
+
+
+
+
+
