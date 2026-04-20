@@ -189,6 +189,12 @@ Denne siden kommunserer helt likt med backenden som side 1, ettersom de begge to
 #### Side 3 - Skrive anmeldelse 
 Formålet med denne siden er at det skal gi brukeren muligheten til å skive en rating og kommentar til et album eller singel. Denne siden litt anderledes, og det er med komplisert. 
 
+Denne har en lytte funksjon som kalles på når skjemaet sendes inn. window.location.search henter ut det som står etter spørsmålstegnet. Så når jeg trykker på et album jeg ønsker å anmelde, vil jeg bli sendt til en ny adress som vil se slik ut. 
+
+/anmeldelse/index.html?utgivelses_id=3
+her vil, avhengig av hv aalbum jeg har trykket på, og ønsker å anmelde, vil det stå iden til utgivelsen. I dette eksmeplet står det utgivelse_id = 3, på grunn av at vi trykket på det albumet med id 3. 
+
+Vi gir variablene dato, kommentar, rating verdien av det som skrives inn i skejmaet. Datoen som vi legger inn for anmeldelsen vil være verdien dato for. Jeg kjekker i consollen og ser at dataen skrevtet inn er lagret i ved de riktige variablene. 
 
 
 
