@@ -4,7 +4,7 @@ skjema.addEventListener("submit", async function (info) {
     info.preventDefault();
 
     const params = new URLSearchParams(window.location.search); //params for
-    const utgivelses_id = params.get("id");
+    const utgivelses_id = params.get("utgivelses_id");
 
     const dato = document.getElementById("dato").value;
     const kommentar = document.getElementById("kommentar").value;
@@ -14,8 +14,8 @@ skjema.addEventListener("submit", async function (info) {
 
     try {
         const response = await fetch('/api/skriv_anmeldelse', { 
-            method: 'Post', 
-            header: {
+            method: 'POST', 
+            headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({dato, kommentar, rating, utgivelses_id})

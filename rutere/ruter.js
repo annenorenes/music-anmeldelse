@@ -33,7 +33,7 @@ router.get('/hente_alle_artister', (req, res) => {
 
 router.post('/skriv_anmeldelse', (req, res) => {
     try {
-        const { dato, kommentar, rating, utgivelses_id } = req.body; //body er en varibalen, som består av fire verdier (dato, kommentar, rating, utgivelses_id) med data, som skal sendes inn i databasen. Vi requester å sende daten til de fire verdiene inn
+        const {dato, kommentar, rating, utgivelses_id } = req.body; //body er en varibalen, som består av fire verdier (dato, kommentar, rating, utgivelses_id) med data, som skal sendes inn i databasen. Vi requester å sende daten til de fire verdiene inn
 
         //gjør deg klar til å legge til data i databsen
         const leggTil = db.prepare(` 
