@@ -175,7 +175,6 @@ I koden har jeg tre ulike sider, som skal etter hvert ha en sammenheng.
 
 ### "hvilke sider, hva de gjør, og hvordan de kommuniserer med backend"
 
-
 #### Side 1 - Alle relevante album
 Denne siden skal vise frem alle relevante album, hvor det som egentlig skjer er at det hentes informasjon fra databasen og til nettsiden, altså klient siden.
 
@@ -198,7 +197,7 @@ Vi gir variablene dato, kommentar, rating verdien av det som skrives inn i skejm
 
 dataen som skal sendes inn, sendes inn når vi sender inn skejmaet, grunnet til at da kjører fetch, så da altså kaller på API-endepunktet. 
 
-    Som forklaring lengre opp, vil dette API-endepunktet sender data inn. Her er det beskrevet at data med navn 'dato, kommentar, rating, utgivelses_id', skal sendes inn i databasen. Så når 
+    Som forklaring lengre opp, vil dette API-endepunktet sender data inn. Her er det beskrevet at data med navn 'dato, kommentar, rating, utgivelses_id', skal sendes inn i databasen. 
 
 
 
