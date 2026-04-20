@@ -155,8 +155,6 @@ variabelen album består av en spørringing til databsen, og vi sier db.prepare,
 
 res.json(album) forteller at arrayn skal sendes som sendes som en string. Grunnen til det er at over internett så kan man kun sende som en string
 
-**skriv om feil mld her anne!**
-
 **/api/skriv_anmeldelse** er skrevet slik pga :
 
 Denne er anderledes, og man ser det tydlig etter ruteren er betydlig lengre. Denne ruteren krever data som den skal sendes inn i musikk.db 

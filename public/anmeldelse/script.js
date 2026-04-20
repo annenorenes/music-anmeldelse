@@ -13,7 +13,7 @@ skjema.addEventListener("submit", async function (info) {
     console.log({dato, kommentar, rating, utgivelses_id})
 
     try {
-        const response = await fetch('/api/skriv_anmeldels', { 
+        const response = await fetch('/api/skriv_anmeldelse', { 
             method: 'Post', 
             header: {
                 'Content-Type': 'application/json'

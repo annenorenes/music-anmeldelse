@@ -50,5 +50,5 @@ router.post('/skriv_anmeldelse', (req, res) => {
     }
 });
 
-module.exports = router;
+module.exports = router; //Exporterer ruterene slik at det er mulig å hente api endepunktene 
 
