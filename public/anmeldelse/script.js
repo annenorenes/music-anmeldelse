@@ -1,40 +1,3 @@
-// async function sendAnmeldelse() {
-//     const params = new URLSearchParams(window.location.search);
-//     const utgivelses_id = params.get("utgivelses_id");
-
-//     const dato = document.getElementById("dato").value;
-//     const kommentar = document.getElementById("kommentar").value;
-//     const rating = document.getElementById("rating").value;
-
-//     try {
-//         const response = await fetch('/api/skriv_anmeldelse', {
-//             method: "POST",
-//             headers: { "Content-Type": "application/json" },
-//             body: JSON.stringify({ dato, kommentar, rating, utgivelses_id })
-//         });
-
-//         const data = await response.json();
-//         console.log(data);
-
-//         if (data.message) {
-//             alert("Anmeldelse sendt!");
-//         } else {
-//             alert("Feil: " + data.error);
-//         }
-//     }
-
-//     catch (error) {
-//         console.log("Kunne ikke sende anmeldelse");
-//     }
-// }
-
-// document.getElementById("skjema").addEventListener("submit", function (e) {
-//     e.preventDefault();
-//     sendAnmeldelse();
-// });
-
-
-
 const skjema = document.getElementById("skjema")
 
 skjema.addEventListener("submit", async function (info) {
@@ -67,6 +30,4 @@ skjema.addEventListener("submit", async function (info) {
         console.error("Kunne ikke koble til til serveren", error);
     }
 
-
-
-})
+});
