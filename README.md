@@ -196,6 +196,9 @@ her vil, avhengig av hv aalbum jeg har trykket på, og ønsker å anmelde, vil d
 
 Vi gir variablene dato, kommentar, rating verdien av det som skrives inn i skejmaet. Datoen som vi legger inn for anmeldelsen vil være verdien dato for. Jeg kjekker i consollen og ser at dataen skrevtet inn er lagret i ved de riktige variablene. 
 
+dataen som skal sendes inn, sendes inn når vi sender inn skejmaet, grunnet til at da kjører fetch, så da altså kaller på API-endepunktet. 
+
+    Som forklaring lengre opp, vil dette API-endepunktet sender data inn. Her er det beskrevet at data med navn 'dato, kommentar, rating, utgivelses_id', skal sendes inn i databasen. Så når 
 
 
 
