@@ -3,7 +3,7 @@ const skjema = document.getElementById("skjema")
 skjema.addEventListener("submit", async function (info) {
     info.preventDefault();
 
-    const params = new URLSearchParams(window.location.search); //params for
+    const params = new URLSearchParams(window.location.search); //henter alt som står etter spørsmålstegnet
     const utgivelses_id = params.get("utgivelses_id");
 
     const dato = document.getElementById("dato").value;

@@ -1,5 +1,3 @@
-
-
 async function henteData() {
     try {
         const res = await fetch('/api/hente_alle_album');
@@ -19,7 +17,7 @@ async function henteData() {
 
             let albumBilde = document.createElement("img");
             albumBilde.src = "/bilder/" + data[i].utgivelses_bilde;
-            albumBilde.alt = "/bildet er av" + data[i].albumTitle;
+            albumBilde.alt = "/bildet er av " + data[i].titel;
             albumBilde.style.width = "150px";
 
             let anmeldelseKnapp = document.createElement("a");
@@ -29,6 +27,7 @@ async function henteData() {
             albumDiv.appendChild(albumTitle);
             albumDiv.appendChild(albumBilde);
             albumDiv.appendChild(anmeldelseKnapp);
+    
 
 
             utskrift.appendChild(albumDiv);
